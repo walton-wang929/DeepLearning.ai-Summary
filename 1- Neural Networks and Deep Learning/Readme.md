@@ -26,7 +26,7 @@ This is the first course of the deep learning specialization at [Coursera](https
       * [Vectorizing Logistic Regression](#vectorizing-logistic-regression)
       * [Notes on Python and NumPy](#notes-on-python-and-numpy)
       * [General Notes](#general-notes)
-   * [One hideen layer neural networks](#shallow-neural-networks)
+   * [One hideen layer neural networks](#shallow-neural-networks)
       * [Neural Networks Overview](#neural-networks-overview)
       * [Neural Network Representation](#neural-network-representation)
       * [Computing a Neural Network's Output](#computing-a-neural-networks-output)
