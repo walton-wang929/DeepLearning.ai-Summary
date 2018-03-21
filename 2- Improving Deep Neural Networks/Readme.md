@@ -372,6 +372,8 @@ L2-regularization relies on the assumption that a model with small weights is si
 > Regularization will drive your weights to lower values.
 > L2 regularization and Dropout are two very effective regularization techniques.
 
+
+
 ## Optimization algorithms
 
 ### Mini-batch gradient descent
