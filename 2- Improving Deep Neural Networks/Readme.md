@@ -203,12 +203,15 @@ Here are the course summary as its given on the course [link](https://www.course
 
 ### Other regularization methods
 
+- **Getting more Data **
+
 - **Data augmentation**:
   - For example in a computer vision data:
     - You can flip all your pictures horizontally this will give you m more data.
     - You could also take a random position and rotation in an image to get more data.
   - For example in OCR, you'll need the distort the digits.
   - This technique's new data aren't good as the real independent data, but still can be used as a Regularization technique.
+  
 - **Early stopping**:
   - In this technique we plot the training data and the Dev data cost together. In some steps the Dev data cost will stay still.
   - We will pick the point at which the training data graph and Dev data graph are best at.
@@ -216,6 +219,7 @@ Here are the course summary as its given on the course [link](https://www.course
     - ![](Images/02-_Early_stopping.png)
   - This technique is not recommended because it makes us think about something else more than optimize W's and b's.
   - But its advantage is that you don't need to modify a Hyperparameter like in Regularization.
+  
 - **Model Ensembles**:
   - Algorithm:
     - Train multiple independent models.
@@ -223,6 +227,8 @@ Here are the course summary as its given on the course [link](https://www.course
   - It can get you extra 2% performance.
   - It reduces the generalization error.
   - You can use some snapshots of your NN at the training ensembles them and take the results.
+
+## setting up optimization problem 
 
 ### Normalizing inputs
 
@@ -265,6 +271,7 @@ Here are the course summary as its given on the course [link](https://www.course
 - And If W < I (Identity matrix)     The weights will explode.
 - Recently Microsoft trained 152 layers (ResNet)! which is a really big number.
 
+
 ### Weight Initialization for Deep Networks
 
 - A partial solution to the Vanishing / Exploding gradients in NN is better or more careful choice of the random initialization of weights.
@@ -284,7 +291,16 @@ Here are the course summary as its given on the course [link](https://www.course
   ```
 
 - This is the best way to solve Vanishing / Exploding gradients (RELU + Weight Initialization with variance)
-- The initialization in this video is called "He Initialization / Xavier Initialization" and has been published in 2015 paper.
+- The initialization in this video is called "He Initialization /" and has been published in 2015 paper.
+
+--other initialization methods:
+
+  **Xavier Initialization**
+  
+   using activation function : tanh
+   ```
+   np.random.rand(shape)*np.sqrt(1/n[l-1])               #n[l-1] In the multiple layers.
+   ```
 
 ### Numerical approximation of gradients
 
@@ -322,6 +338,39 @@ Here are the course summary as its given on the course [link](https://www.course
 - Run gradient checking at random initialization and train the network for a while maybe there's a bug that are not on the first iteration.
 
 
+**What you should remember from this Initialization part**
+
+> Different initializations lead to different results
+
+> Random initialization is used to break symmetry and make sure different hidden units can learn different things
+
+> Don't intialize to values that are too large
+
+> He initialization works well for networks with ReLU activations.
+
+
+**What is L2-regularization actually doing?**
+
+L2-regularization relies on the assumption that a model with small weights is simpler than a model with large weights. Thus, by penalizing the square values of the weights in the cost function you drive all the weights to smaller values. It becomes too costly for the cost to have large weights! This leads to a smoother model in which the output changes more slowly as the input changes.
+
+**What you should remember -- the implications of L2-regularization on:**
+
+> The cost computation: A regularization term is added to the cost
+> The backpropagation function: There are extra terms in the gradients with respect to weight matrices
+> Weights end up smaller ("weight decay"): Weights are pushed to smaller values.
+
+**What you should remember about dropout:**
+
+> Dropout is a regularization technique.
+> You only use dropout during training. Don't use dropout (randomly eliminate nodes) during test time.
+> Apply dropout both during forward and backward propagation.
+> During training time, divide each dropout layer by keep_prob to keep the same expected value for the activations. For example, if keep_prob is 0.5, then we will on average shut down half the nodes, so the output will be scaled by 0.5 since only the remaining half are contributing to the solution. Dividing by 0.5 is equivalent to multiplying by 2. Hence, the output now has the same expected value. You can check that this works even when keep_prob is other values than 0.5.
+
+**What we want you to remember from this Regularization part:**
+
+> Regularization will help you reduce overfitting.
+> Regularization will drive your weights to lower values.
+> L2 regularization and Dropout are two very effective regularization techniques.
 
 ## Optimization algorithms
 
