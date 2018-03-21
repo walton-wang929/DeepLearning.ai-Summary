@@ -408,6 +408,7 @@ L2-regularization relies on the assumption that a model with small weights is si
 
 - In mini batch algorithm, the cost won't go down with each step as batch algorithm do. It could contain some ups and downs but at whole it has to go down.
   - ![](Images/04-_batch_vs_mini_batch_cost.png)
+  
 - Choosing mini-batch size
   - If (`mini batch size = m`)     ==>    Batch gradient descent
     - If (`mini batch size = 1`)  ==>    Stochastic gradient descent
@@ -491,12 +492,12 @@ L2-regularization relies on the assumption that a model with small weights is si
 
 - As you see the as t became larger the `(1 - beta^t)` became `1`
 
+
 ### Gradient descent with momentum
 
 - The momentum algorithm works faster than standard Gradient descent.
 - The simple idea is to calculate the exponentially weighted averages for your gradients and then updates your weights with the new values.
 - Pseudo code:
-
   ```
   VdW = 0, Vdb = 0
   on iteration t:
