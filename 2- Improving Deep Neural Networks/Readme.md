@@ -8,7 +8,7 @@ This is the second course of the deep learning specialization at [Coursera](http
    * [Table of contents](#table-of-contents)
    * [Course summary](#course-summary)
    * [Week1: Practical aspects of Deep Learning](#practical-aspects-of-deep-learning)
-      * [Setting up your Machine Learning Application](# Setting up your Machine Learning Application)
+      * [Setting up your Machine Learning Application](#setting-up-your-machine-learning-application)
         * [Train / Dev / Test sets](#train--dev--test-sets)
         * [Bias / Variance](#bias--variance)
         * [Basic Recipe for Machine Learning](#basic-recipe-for-machine-learning)
