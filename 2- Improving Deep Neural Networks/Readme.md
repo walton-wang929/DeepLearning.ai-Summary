@@ -78,7 +78,7 @@ Here are the course summary as its given on the course [link](https://www.course
 
 
 
-## Practical aspects of Deep Learning
+## Week1: Practical aspects of Deep Learning
 
 ### Setting up your Machine Learning Application
 
