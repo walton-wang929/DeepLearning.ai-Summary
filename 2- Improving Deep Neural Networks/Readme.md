@@ -80,7 +80,9 @@ Here are the course summary as its given on the course [link](https://www.course
 
 ## Practical aspects of Deep Learning
 
-### Train / Dev / Test sets
+### Setting up your Machine Learning Application
+
+#### Train / Dev / Test sets
 
 - Its impossible to get all your hyperparameters right on a new application from the first time.
 - So the idea is you go through the loop: `Idea ==> Code ==> Experiment`.
@@ -100,7 +102,7 @@ Here are the course summary as its given on the course [link](https://www.course
 - Its OK to only have a Dev set without a testing set.
 - Almost all People is calling the Dev set, the test set. But a better terminology is to call it a Dev set as its used in the development.
 
-### Bias / Variance
+#### Bias / Variance
 
 - Bias / Variance techniques are Easy to learn, but difficult to master.
 - So here the explanation of Bias / Variance:
@@ -124,7 +126,7 @@ Here are the course summary as its given on the course [link](https://www.course
     - Test error: 1%
   - These Assumptions came from that human has 0% error. If the problem isn't like that you'll need another approach.
 
-### Basic Recipe for Machine Learning
+#### Basic Recipe for Machine Learning
 
 - If your algorithm has a high bias:
   - Try to make your NN bigger (Size of Hidden units, Number of layers)
@@ -139,7 +141,9 @@ Here are the course summary as its given on the course [link](https://www.course
 - In the older days before deep learning there was a "Bias / variance trade off". But because now you have more options on solving the bias of variance problem its really helpful to use deep learning.
 - Training a bigger neural network never hurt.
 
-### Regularization
+### Regularizing your neural network
+
+#### Regularization
 
 - Adding Regularization to NN will help it reduce variance (Overfitting)
 - L1 matrix Norm:
@@ -186,7 +190,7 @@ Here are the course summary as its given on the course [link](https://www.course
      - If `Lmda` is too large, w's will be small which makes the Tanh activation function to be from non linear to linear which makes the NN a linear classifier.
      - If `Lmda` good enough it will just make some Tanh activation a linear classifier which will prevent overfitting.
 
-### Dropout Regularization
+#### Dropout Regularization
 
 - In the most cases Andrew Ng tells that he uses the L1/L2 regularization.
 - The dropout Regularization eliminates some neurons/weights on each iteration based on a probability.
@@ -208,7 +212,7 @@ Here are the course summary as its given on the course [link](https://www.course
 
 - At test time we don't run the "Inverse dropout"
 
-### Understanding Dropout
+#### Understanding Dropout
 
 - Can't rely on one feature so have to spread out weights
 - Dropout can have different dropouts per layer.
@@ -217,7 +221,7 @@ Here are the course summary as its given on the course [link](https://www.course
 - Downside of dropout is that the loss function is not well defined and it will be hard to debug.
   - To solve that you'll need to set all the dropouts by 1 and then check your cost graph if its going well set the dropouts again.
 
-### Other regularization methods
+#### Other regularization methods
 
 - **Getting more Data **
 
@@ -244,9 +248,9 @@ Here are the course summary as its given on the course [link](https://www.course
   - It reduces the generalization error.
   - You can use some snapshots of your NN at the training ensembles them and take the results.
 
-## setting up optimization problem 
+### Setting up your optimization problem
 
-### Normalizing inputs
+#### Normalizing inputs
 
 - If you normalize your inputs this will speed up the training process a lot.
 - Normalization are going on these steps:
@@ -260,7 +264,7 @@ Here are the course summary as its given on the course [link](https://www.course
   - If we don't normalize the inputs our loss function will be deep and its shape is inconsistent then optimizing it will take a long time.
   - But if we normalize it the opposite will occur. the shape of the function will be consistent and the optimizing will be easier.
 
-### Vanishing / Exploding gradients
+#### Vanishing / Exploding gradients
 
 - The Vanishing / Exploding gradients occurs when your derivatives become very small or very big.
 - To understand the problem, suppose that we have a deep neural network with number of layers L, and all the activation functions are **linear** and each `b = 0`
@@ -288,7 +292,7 @@ Here are the course summary as its given on the course [link](https://www.course
 - Recently Microsoft trained 152 layers (ResNet)! which is a really big number.
 
 
-### Weight Initialization for Deep Networks
+#### Weight Initialization for Deep Networks
 
 - A partial solution to the Vanishing / Exploding gradients in NN is better or more careful choice of the random initialization of weights.
 - In a single neuron (Perceptron model): `Z = w1X1 + w2X2 + ...+wnXn`
@@ -318,7 +322,7 @@ Here are the course summary as its given on the course [link](https://www.course
    np.random.rand(shape)*np.sqrt(1/n[l-1])               #n[l-1] In the multiple layers.
    ```
 
-### Numerical approximation of gradients
+#### Numerical approximation of gradients
 
 - There is an implementation called gradient check which tells if your implementation of back prob. is right.
 - There's a numerical way to calculate the derivative
@@ -340,7 +344,7 @@ Here are the course summary as its given on the course [link](https://www.course
   - Finally we check this formula  `(||d_ceta_calc - d_ceta||) / (||d_ceta_calc||+||d_ceta||)` 
     - The `||` is the Euclidean distance.
 
-### Gradient checking implementation notes
+#### Gradient checking implementation notes
 
 - Don't use the gradient-checking algorithm for all the calculation because its a much slow algorithm
 - The gradient-checking is for debugging.
