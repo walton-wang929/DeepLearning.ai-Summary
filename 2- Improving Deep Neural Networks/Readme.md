@@ -7,7 +7,7 @@ This is the second course of the deep learning specialization at [Coursera](http
 * [Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization](#improving-deep-neural-networks-hyperparameter-tuning-regularization-and-optimization)
    * [Table of contents](#table-of-contents)
    * [Course summary](#course-summary)
-   * [Week1: Practical aspects of Deep Learning](#week1-practical-aspects-of-deep-learning)
+   * [Week1: Practical aspects of Deep Learning](#week1:practical-aspects-of-deep-learning)
       * [Setting up your Machine Learning Application](# Setting up your Machine Learning Application)
         * [Train / Dev / Test sets](#train--dev--test-sets)
         * [Bias / Variance](#bias--variance)
