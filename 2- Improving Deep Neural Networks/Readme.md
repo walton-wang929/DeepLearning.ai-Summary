@@ -7,58 +7,42 @@ This is the second course of the deep learning specialization at [Coursera](http
 * [Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization](#improving-deep-neural-networks-hyperparameter-tuning-regularization-and-optimization)
    * [Table of contents](#table-of-contents)
    * [Course summary](#course-summary)
-   * [Week1: Practical aspects of Deep Learning](#practical-aspects-of-deep-learning)
-      * [Setting up your Machine Learning Application](#setting-up-your-machine-learning-application)
-        * [Train / Dev / Test sets](#train--dev--test-sets)
-        * [Bias / Variance](#bias--variance)
-        * [Basic Recipe for Machine Learning](#basic-recipe-for-machine-learning)
-      * [Regularizing your neural network](#regularizing-your-neural-network)
-        * [Regularization](#regularization)
-        * [Dropout Regularization](#dropout-regularization)
-        * [Understanding Dropout](#understanding-dropout)
-        * [Other regularization methods](#other-regularization-methods)
-      * [Setting up your optimization problem](#setting-up-your-optimization-problem)
-        * [Normalizing inputs](#normalizing-inputs)
-        * [Vanishing / Exploding gradients](#vanishing--exploding-gradients)
-        * [Weight Initialization for Deep Networks](#weight-initialization-for-deep-networks)
-        * [Numerical approximation of gradients](#numerical-approximation-of-gradients)
-        * [Gradient checking implementation notes](#gradient-checking-implementation-notes)
-      * [QUIZ:Practical aspects of deep learning](#practical-aspects-of-deep-learning) 
-      * [Programming assignments]()
-      * [Heroes of Deep Learning: Yoshua Bengio interview]()
-   * [Weeek2: Optimization algorithms](#optimization-algorithms)
-      * [Optimization algorithms](#optimization-algorithms)
-        * [Mini-batch gradient descent](#mini-batch-gradient-descent)
-        * [Understanding mini-batch gradient descent](#understanding-mini-batch-gradient-descent)
-        * [Exponentially weighted averages](#exponentially-weighted-averages)
-        * [Understanding exponentially weighted averages](#understanding-exponentially-weighted-averages)
-        * [Bias correction in exponentially weighted averages](#bias-correction-in-exponentially-weighted-averages)
-        * [Gradient descent with momentum](#gradient-descent-with-momentum)
-        * [RMSprop](#rmsprop)
-        * [Adam optimization algorithm](#adam-optimization-algorithm)
-        * [Learning rate decay](#learning-rate-decay)
-        * [The problem of local optima](#the-problem-of-local-optima)
-      * [QUIZ:Optimization algorithms]() 
-      * [Programming assignments]()
-      * [Heroes of Deep Learning: Yuanqing Lin interview]()
-   * [Week3: Hyperparameter tuning, Batch Normalization and Programming Frameworks](#hyperparameter-tuning-batch-normalization-and-programming-frameworks)
-      * [Hyperparameter tuning](#hyperparameter-tuning)
-        * [Tuning process](#tuning-process)
-        * [Using an appropriate scale to pick hyperparameters](#using-an-appropriate-scale-to-pick-hyperparameters)
-        * [Hyperparameters tuning in practice: Pandas vs. Caviar](#hyperparameters-tuning-in-practice-pandas-vs-caviar)
-      * [Batch Normalization](#batch-normalization)  
-        * [Normalizing activations in a network](#normalizing-activations-in-a-network)
-        * [Fitting Batch Normalization into a neural network](#fitting-batch-normalization-into-a-neural-network)
-        * [Why does Batch normalization work](#why-does-batch-normalization-work)
-        * [Batch normalization at test time](#batch-normalization-at-test-time)
-      * [Multi-class classificationn](#multi-class-classification)   
-        * [Softmax Regression](#softmax-regression)
-        * [Training a Softmax classifier](#training-a-softmax-classifier)
-      * [Introduction to programming frameworks](#introduction-to-programming-frameworks)     
-        * [Deep learning frameworks](#deep-learning-frameworks)
-        * [TensorFlow](#tensorflow)
-      * [QUIZ:Hyperparameter tuning, Batch Normalization, Programming Frameworks]() 
-      * [Programming assignments]()
+   * [Practical aspects of Deep Learning](#practical-aspects-of-deep-learning)
+      * [Train / Dev / Test sets](#train--dev--test-sets)
+      * [Bias / Variance](#bias--variance)
+      * [Basic Recipe for Machine Learning](#basic-recipe-for-machine-learning)
+      * [Regularization](#regularization)
+      * [Dropout Regularization](#dropout-regularization)
+      * [Understanding Dropout](#understanding-dropout)
+      * [Other regularization methods](#other-regularization-methods)
+      * [Normalizing inputs](#normalizing-inputs)
+      * [Vanishing / Exploding gradients](#vanishing--exploding-gradients)
+      * [Weight Initialization for Deep Networks](#weight-initialization-for-deep-networks)
+      * [Numerical approximation of gradients](#numerical-approximation-of-gradients)
+      * [Gradient checking implementation notes](#gradient-checking-implementation-notes)
+   * [Optimization algorithms](#optimization-algorithms)
+      * [Mini-batch gradient descent](#mini-batch-gradient-descent)
+      * [Understanding mini-batch gradient descent](#understanding-mini-batch-gradient-descent)
+      * [Exponentially weighted averages](#exponentially-weighted-averages)
+      * [Understanding exponentially weighted averages](#understanding-exponentially-weighted-averages)
+      * [Bias correction in exponentially weighted averages](#bias-correction-in-exponentially-weighted-averages)
+      * [Gradient descent with momentum](#gradient-descent-with-momentum)
+      * [RMSprop](#rmsprop)
+      * [Adam optimization algorithm](#adam-optimization-algorithm)
+      * [Learning rate decay](#learning-rate-decay)
+      * [The problem of local optima](#the-problem-of-local-optima)
+   * [Hyperparameter tuning, Batch Normalization and Programming Frameworks](#hyperparameter-tuning-batch-normalization-and-programming-frameworks)
+      * [Tuning process](#tuning-process)
+      * [Using an appropriate scale to pick hyperparameters](#using-an-appropriate-scale-to-pick-hyperparameters)
+      * [Hyperparameters tuning in practice: Pandas vs. Caviar](#hyperparameters-tuning-in-practice-pandas-vs-caviar)
+      * [Normalizing activations in a network](#normalizing-activations-in-a-network)
+      * [Fitting Batch Normalization into a neural network](#fitting-batch-normalization-into-a-neural-network)
+      * [Why does Batch normalization work](#why-does-batch-normalization-work)
+      * [Batch normalization at test time](#batch-normalization-at-test-time)
+      * [Softmax Regression](#softmax-regression)
+      * [Training a Softmax classifier](#training-a-softmax-classifier)
+      * [Deep learning frameworks](#deep-learning-frameworks)
+      * [TensorFlow](#tensorflow)
    * [Extra Notes](#extra-notes)
 
 ## Course summary
@@ -80,9 +64,7 @@ Here are the course summary as its given on the course [link](https://www.course
 
 ## Practical aspects of Deep Learning
 
-### Setting up your Machine Learning Application
-
-#### Train / Dev / Test sets
+### Train / Dev / Test sets
 
 - Its impossible to get all your hyperparameters right on a new application from the first time.
 - So the idea is you go through the loop: `Idea ==> Code ==> Experiment`.
@@ -102,7 +84,7 @@ Here are the course summary as its given on the course [link](https://www.course
 - Its OK to only have a Dev set without a testing set.
 - Almost all People is calling the Dev set, the test set. But a better terminology is to call it a Dev set as its used in the development.
 
-#### Bias / Variance
+### Bias / Variance
 
 - Bias / Variance techniques are Easy to learn, but difficult to master.
 - So here the explanation of Bias / Variance:
@@ -126,7 +108,7 @@ Here are the course summary as its given on the course [link](https://www.course
     - Test error: 1%
   - These Assumptions came from that human has 0% error. If the problem isn't like that you'll need another approach.
 
-#### Basic Recipe for Machine Learning
+### Basic Recipe for Machine Learning
 
 - If your algorithm has a high bias:
   - Try to make your NN bigger (Size of Hidden units, Number of layers)
@@ -141,9 +123,7 @@ Here are the course summary as its given on the course [link](https://www.course
 - In the older days before deep learning there was a "Bias / variance trade off". But because now you have more options on solving the bias of variance problem its really helpful to use deep learning.
 - Training a bigger neural network never hurt.
 
-### Regularizing your neural network
-
-#### Regularization
+### Regularization
 
 - Adding Regularization to NN will help it reduce variance (Overfitting)
 - L1 matrix Norm:
@@ -190,7 +170,7 @@ Here are the course summary as its given on the course [link](https://www.course
      - If `Lmda` is too large, w's will be small which makes the Tanh activation function to be from non linear to linear which makes the NN a linear classifier.
      - If `Lmda` good enough it will just make some Tanh activation a linear classifier which will prevent overfitting.
 
-#### Dropout Regularization
+### Dropout Regularization
 
 - In the most cases Andrew Ng tells that he uses the L1/L2 regularization.
 - The dropout Regularization eliminates some neurons/weights on each iteration based on a probability.
@@ -212,7 +192,7 @@ Here are the course summary as its given on the course [link](https://www.course
 
 - At test time we don't run the "Inverse dropout"
 
-#### Understanding Dropout
+### Understanding Dropout
 
 - Can't rely on one feature so have to spread out weights
 - Dropout can have different dropouts per layer.
@@ -221,9 +201,7 @@ Here are the course summary as its given on the course [link](https://www.course
 - Downside of dropout is that the loss function is not well defined and it will be hard to debug.
   - To solve that you'll need to set all the dropouts by 1 and then check your cost graph if its going well set the dropouts again.
 
-#### Other regularization methods
-
-- **Getting more Data **
+### Other regularization methods
 
 - **Data augmentation**:
   - For example in a computer vision data:
@@ -231,7 +209,6 @@ Here are the course summary as its given on the course [link](https://www.course
     - You could also take a random position and rotation in an image to get more data.
   - For example in OCR, you'll need the distort the digits.
   - This technique's new data aren't good as the real independent data, but still can be used as a Regularization technique.
-  
 - **Early stopping**:
   - In this technique we plot the training data and the Dev data cost together. In some steps the Dev data cost will stay still.
   - We will pick the point at which the training data graph and Dev data graph are best at.
@@ -239,7 +216,6 @@ Here are the course summary as its given on the course [link](https://www.course
     - ![](Images/02-_Early_stopping.png)
   - This technique is not recommended because it makes us think about something else more than optimize W's and b's.
   - But its advantage is that you don't need to modify a Hyperparameter like in Regularization.
-  
 - **Model Ensembles**:
   - Algorithm:
     - Train multiple independent models.
@@ -248,9 +224,7 @@ Here are the course summary as its given on the course [link](https://www.course
   - It reduces the generalization error.
   - You can use some snapshots of your NN at the training ensembles them and take the results.
 
-### Setting up your optimization problem
-
-#### Normalizing inputs
+### Normalizing inputs
 
 - If you normalize your inputs this will speed up the training process a lot.
 - Normalization are going on these steps:
@@ -264,7 +238,7 @@ Here are the course summary as its given on the course [link](https://www.course
   - If we don't normalize the inputs our loss function will be deep and its shape is inconsistent then optimizing it will take a long time.
   - But if we normalize it the opposite will occur. the shape of the function will be consistent and the optimizing will be easier.
 
-#### Vanishing / Exploding gradients
+### Vanishing / Exploding gradients
 
 - The Vanishing / Exploding gradients occurs when your derivatives become very small or very big.
 - To understand the problem, suppose that we have a deep neural network with number of layers L, and all the activation functions are **linear** and each `b = 0`
@@ -291,8 +265,7 @@ Here are the course summary as its given on the course [link](https://www.course
 - And If W < I (Identity matrix)     The weights will explode.
 - Recently Microsoft trained 152 layers (ResNet)! which is a really big number.
 
-
-#### Weight Initialization for Deep Networks
+### Weight Initialization for Deep Networks
 
 - A partial solution to the Vanishing / Exploding gradients in NN is better or more careful choice of the random initialization of weights.
 - In a single neuron (Perceptron model): `Z = w1X1 + w2X2 + ...+wnXn`
@@ -311,18 +284,9 @@ Here are the course summary as its given on the course [link](https://www.course
   ```
 
 - This is the best way to solve Vanishing / Exploding gradients (RELU + Weight Initialization with variance)
-- The initialization in this video is called "He Initialization /" and has been published in 2015 paper.
+- The initialization in this video is called "He Initialization / Xavier Initialization" and has been published in 2015 paper.
 
---other initialization methods:
-
-  **Xavier Initialization**
-  
-   using activation function : tanh
-   ```
-   np.random.rand(shape)*np.sqrt(1/n[l-1])               #n[l-1] In the multiple layers.
-   ```
-
-#### Numerical approximation of gradients
+### Numerical approximation of gradients
 
 - There is an implementation called gradient check which tells if your implementation of back prob. is right.
 - There's a numerical way to calculate the derivative
@@ -344,7 +308,7 @@ Here are the course summary as its given on the course [link](https://www.course
   - Finally we check this formula  `(||d_ceta_calc - d_ceta||) / (||d_ceta_calc||+||d_ceta||)` 
     - The `||` is the Euclidean distance.
 
-#### Gradient checking implementation notes
+### Gradient checking implementation notes
 
 - Don't use the gradient-checking algorithm for all the calculation because its a much slow algorithm
 - The gradient-checking is for debugging.
@@ -356,41 +320,6 @@ Here are the course summary as its given on the course [link](https://www.course
 - Gradient checking doesn't work with dropout.
   - because J is not consistent.
 - Run gradient checking at random initialization and train the network for a while maybe there's a bug that are not on the first iteration.
-
-
-**What you should remember from this Initialization part**
-
-> Different initializations lead to different results
-
-> Random initialization is used to break symmetry and make sure different hidden units can learn different things
-
-> Don't intialize to values that are too large
-
-> He initialization works well for networks with ReLU activations.
-
-
-**What is L2-regularization actually doing?**
-
-L2-regularization relies on the assumption that a model with small weights is simpler than a model with large weights. Thus, by penalizing the square values of the weights in the cost function you drive all the weights to smaller values. It becomes too costly for the cost to have large weights! This leads to a smoother model in which the output changes more slowly as the input changes.
-
-**What you should remember -- the implications of L2-regularization on:**
-
-> The cost computation: A regularization term is added to the cost
-> The backpropagation function: There are extra terms in the gradients with respect to weight matrices
-> Weights end up smaller ("weight decay"): Weights are pushed to smaller values.
-
-**What you should remember about dropout:**
-
-> Dropout is a regularization technique.
-> You only use dropout during training. Don't use dropout (randomly eliminate nodes) during test time.
-> Apply dropout both during forward and backward propagation.
-> During training time, divide each dropout layer by keep_prob to keep the same expected value for the activations. For example, if keep_prob is 0.5, then we will on average shut down half the nodes, so the output will be scaled by 0.5 since only the remaining half are contributing to the solution. Dividing by 0.5 is equivalent to multiplying by 2. Hence, the output now has the same expected value. You can check that this works even when keep_prob is other values than 0.5.
-
-**What we want you to remember from this Regularization part:**
-
-> Regularization will help you reduce overfitting.
-> Regularization will drive your weights to lower values.
-> L2 regularization and Dropout are two very effective regularization techniques.
 
 
 
@@ -428,7 +357,6 @@ L2-regularization relies on the assumption that a model with small weights is si
 
 - In mini batch algorithm, the cost won't go down with each step as batch algorithm do. It could contain some ups and downs but at whole it has to go down.
   - ![](Images/04-_batch_vs_mini_batch_cost.png)
-  
 - Choosing mini-batch size
   - If (`mini batch size = m`)     ==>    Batch gradient descent
     - If (`mini batch size = 1`)  ==>    Stochastic gradient descent
@@ -512,12 +440,12 @@ L2-regularization relies on the assumption that a model with small weights is si
 
 - As you see the as t became larger the `(1 - beta^t)` became `1`
 
-
 ### Gradient descent with momentum
 
 - The momentum algorithm works faster than standard Gradient descent.
 - The simple idea is to calculate the exponentially weighted averages for your gradients and then updates your weights with the new values.
 - Pseudo code:
+
   ```
   VdW = 0, Vdb = 0
   on iteration t:
